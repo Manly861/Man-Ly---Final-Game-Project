@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class RollingRock : MonoBehaviour
 {
-    public float speed = 5f;
+    public float speed = 10f;
     private float rolling = 1;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -13,7 +13,7 @@ public class RollingRock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.forward * Time.deltaTime * speed);
+        transform.Translate(Vector3.back * Time.deltaTime * speed);
         transform.Rotate(Vector3.forward,  speed * rolling * Time.deltaTime);
     }
 }
