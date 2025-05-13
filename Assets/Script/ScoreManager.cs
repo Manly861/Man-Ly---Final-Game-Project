@@ -1,12 +1,10 @@
 using UnityEngine;
 using TMPro;
 
-public class UIManager : MonoBehaviour
+public class ScoreManager : MonoBehaviour
 {
-    public static UIManager Instance;
     public TextMeshProUGUI scoreText;
     private int score;
-    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,12 +17,6 @@ public class UIManager : MonoBehaviour
     {
         
     }
-    private void Awake()
-    {
-        if (Instance == null) Instance = this;
-        else Destroy(gameObject);
-    }
-
     public void UpdateScore(int scoretoAdd)
     {
         score += scoretoAdd;
