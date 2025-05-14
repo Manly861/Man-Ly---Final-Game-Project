@@ -1333,7 +1333,7 @@ GameObject:
   - component: {fileID: -3945008655770340527}
   m_Layer: 0
   m_Name: Animal_Rooster_Brown
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1407,6 +1407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32205f7c5a5c2c749bd9802afea52e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreManager: {fileID: 0}
 --- !u!65 &1847870708847192300
 BoxCollider:
   m_ObjectHideFlags: 0

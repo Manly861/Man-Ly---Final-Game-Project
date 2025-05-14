@@ -13,11 +13,10 @@ public class DetectCollision : MonoBehaviour
     {
         
     }
-    public void OnTriggerEnter(Collider other)
+    public void OnHitByBullet()
     {
-        Destroy(other.gameObject);
-        Destroy(gameObject);
         scoreManager.UpdateScore(10);
+        Destroy(gameObject); // phá huỷ obstacle
     }
     
 }

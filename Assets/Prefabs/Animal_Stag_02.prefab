@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -699696308182349128}
   m_Layer: 0
   m_Name: Animal_Stag_02
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,6 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32205f7c5a5c2c749bd9802afea52e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreManager: {fileID: 0}
 --- !u!65 &1216353997606740847
 BoxCollider:
   m_ObjectHideFlags: 0
