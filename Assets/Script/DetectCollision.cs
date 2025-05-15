@@ -23,7 +23,6 @@ public class DetectCollision : MonoBehaviour
         }
         else if (CompareTag("Animal"))
         {
-            Debug.Log("Hit by rock: " + gameObject.name);
             liveManager.UpdateLiveText(-1);
         }
         Destroy(gameObject);

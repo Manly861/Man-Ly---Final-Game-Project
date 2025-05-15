@@ -8,7 +8,8 @@ public class LiveManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        UpdateLiveText(3);
+        live = 3;
+        UpdateLiveText(0);
     }
 
     // Update is called once per frame
@@ -20,5 +21,16 @@ public class LiveManager : MonoBehaviour
     {
         live += Minuslive;
         liveText.text = "Live: " + live;
+        if (live == 0)
+        {
+            GameOver();
+        }
     }
+    public void GameOver()
+    {
+        Debug.Log("Game Over!");
+        Time.timeScale = 0.0f;
+    }
+
+
 }
