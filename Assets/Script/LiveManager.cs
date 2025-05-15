@@ -8,13 +8,17 @@ public class LiveManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        live = 3;
-        liveText.text = "Live: "  +live;
+        UpdateLiveText(3);
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+    public void UpdateLiveText(int Minuslive)
+    {
+        live += Minuslive;
+        liveText.text = "Live: " + live;
     }
 }

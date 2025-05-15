@@ -3,20 +3,32 @@ using UnityEngine;
 public class DetectCollision : MonoBehaviour
 {
     public ScoreManager scoreManager;
+    public LiveManager liveManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         scoreManager = FindObjectOfType<ScoreManager>();
+        liveManager = FindObjectOfType<LiveManager>();
     }
     // Update is called once per frame
     void Update()
     {
         
     }
-    public void OnHitByBullet()
+    public void OnHitBySmallRock()
     {
-        scoreManager.UpdateScore(10);
-        Destroy(gameObject); // phá huỷ obstacle
-    }
+        if (CompareTag("Obstacle"))
+        {
+            scoreManager.UpdateScore(10);
+        }
+        else if (CompareTag("Animal"))
+        {
+            Debug.Log("Hit by rock: " + gameObject.name);
+            liveManager.UpdateLiveText(-1);
+        }
+        Destroy(gameObject);
+
+        
+    }   
     
 }

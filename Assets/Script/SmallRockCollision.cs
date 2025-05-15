@@ -17,15 +17,12 @@ public class SmallRockCollision : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (hasHit) return;
-        if (other.CompareTag("Obstacle"))
-            {
-                DetectCollision detect = other.GetComponent<DetectCollision>();
-                if (detect != null)
-                {
-                    detect.OnHitByBullet();  // chỉ 1 obstacle được xử lý
-                }
-                hasHit = true;
-                Destroy(gameObject);
-            }
+        DetectCollision detect = other.GetComponent<DetectCollision>();
+        if (detect != null)
+        {
+            detect.OnHitBySmallRock();
+        }
+        hasHit = true;
+        Destroy(gameObject);
     }
 }
