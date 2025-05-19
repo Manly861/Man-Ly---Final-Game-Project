@@ -1,7 +1,7 @@
 using UnityEngine;
-public class SpawnManager : MonoBehaviour
+public class SpawnRockManager : MonoBehaviour
 {
-    public GameObject [] animalPrefabs;
+    public GameObject [] rockPrefabs;
     private float spawnRangeX = 10;
     private float spawnPosZ = 20;
     private float startDelay = 2;
@@ -9,7 +9,7 @@ public class SpawnManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        InvokeRepeating("SpawnRandomAnimal", startDelay, spawnInterval);
+        InvokeRepeating("SpawnRocks", startDelay, spawnInterval);
     }
 
     // Update is called once per frame
@@ -17,11 +17,11 @@ public class SpawnManager : MonoBehaviour
     {
       
     }
-    void SpawnRandomAnimal() 
+    void SpawnRocks() 
     {
         // Randomly generate animal index and spawn position
         Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
-        int animalIndex = Random.Range(0, animalPrefabs.Length);
-        Instantiate(animalPrefabs[animalIndex], spawnPos, animalPrefabs[animalIndex].transform.rotation);
+        int rockIndex = Random.Range(0, rockPrefabs.Length);
+        Instantiate(rockPrefabs[rockIndex], spawnPos, rockPrefabs[rockIndex].transform.rotation);
     }
 }
