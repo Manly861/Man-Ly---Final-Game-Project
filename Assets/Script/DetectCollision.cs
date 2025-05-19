@@ -4,6 +4,7 @@ public class DetectCollision : MonoBehaviour
 {
     public ScoreManager scoreManager;
     public LiveManager liveManager;
+    public int pointValue; 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,7 +20,7 @@ public class DetectCollision : MonoBehaviour
     {
         if (CompareTag("Obstacle"))
         {
-            scoreManager.UpdateScore(10);
+            scoreManager.UpdateScore(pointValue);
         }
         else if (CompareTag("Animal"))
         {

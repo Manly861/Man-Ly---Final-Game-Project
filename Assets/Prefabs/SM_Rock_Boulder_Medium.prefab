@@ -126,6 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreManager: {fileID: 0}
   liveManager: {fileID: 0}
+  pointValue: 10
 --- !u!65 &8228532434643714164
 BoxCollider:
   m_ObjectHideFlags: 0
