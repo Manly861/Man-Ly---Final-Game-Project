@@ -7,10 +7,12 @@ public class PlayerController : MonoBehaviour
     private float xRange = 10;
 
     public GameObject projectilePrefab;
+    private AudioSource playerAudio;
+    public AudioClip shootSound;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        playerAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -31,6 +33,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+            playerAudio.PlayOneShot(shootSound, 1.0f);
         }
     }
 
