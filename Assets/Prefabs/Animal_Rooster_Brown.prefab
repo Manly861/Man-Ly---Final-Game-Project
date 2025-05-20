@@ -1408,6 +1408,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreManager: {fileID: 0}
+  liveManager: {fileID: 0}
+  pointValue: 0
+  explosionParticle: {fileID: 2478549635105912040, guid: ec46c8c4a3cbc429382ee48bd9169b45, type: 3}
 --- !u!65 &1847870708847192300
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1441,6 +1444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93f06080d50a41243b871452ec6bd9a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  missingRockCounting: {fileID: 0}
 --- !u!1 &8753677122291087653
 GameObject:
   m_ObjectHideFlags: 0
