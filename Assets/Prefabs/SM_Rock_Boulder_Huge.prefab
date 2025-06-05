@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 8783951580697661941}
   m_Layer: 0
   m_Name: SM_Rock_Boulder_Huge
-  m_TagString: Obstacle
+  m_TagString: Huge Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,8 +128,8 @@ MonoBehaviour:
   scoreManager: {fileID: 0}
   liveManager: {fileID: 0}
   pointValue: 20
-  objectAudio: {fileID: 0}
   rockHitSound: {fileID: 8300000, guid: 778c6296c72b46b4c8700dd981538da7, type: 3}
+  animalHitSound: {fileID: 0}
   explosionParticle: {fileID: 7535607469619513247, guid: ac10190cf200c4f7e881ca8e41d3d760, type: 3}
 --- !u!82 &-4115994994347698806
 AudioSource:

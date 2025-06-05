@@ -171,6 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   liveText: {fileID: 143185069}
+  live: 0
 --- !u!114 &143185068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,8 +187,8 @@ MonoBehaviour:
   scoreManager: {fileID: 0}
   liveManager: {fileID: 0}
   pointValue: 0
-  objectAudio: {fileID: 0}
   rockHitSound: {fileID: 0}
+  animalHitSound: {fileID: 0}
   explosionParticle: {fileID: 0}
 --- !u!114 &143185069
 MonoBehaviour:
@@ -420,7 +421,7 @@ GameObject:
   - component: {fileID: 336478497}
   - component: {fileID: 336478496}
   m_Layer: 0
-  m_Name: SpawnManager
+  m_Name: SpawnAnimalManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -554,9 +555,11 @@ GameObject:
   - component: {fileID: 475985834}
   - component: {fileID: 475985837}
   - component: {fileID: 475985836}
+  - component: {fileID: 475985839}
+  - component: {fileID: 475985838}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -570,7 +573,7 @@ Transform:
   m_GameObject: {fileID: 475985833}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000006027569, y: -0.0017257332, z: 0.001003708, w: 0.99999803}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalPosition: {x: -0.1, y: 0, z: 9.6}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -629,6 +632,117 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 475985833}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!82 &475985838
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475985833}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &475985839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475985833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff3811fa9d8314e4c81c9d3d5820173c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  liveManager: {fileID: 0}
+  backGroundMusic: {fileID: 8300000, guid: e955a22331e0d1549aeb9031fe5bdc30, type: 3}
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -1266,8 +1380,8 @@ MonoBehaviour:
   scoreManager: {fileID: 889430094}
   liveManager: {fileID: 0}
   pointValue: 0
-  objectAudio: {fileID: 0}
   rockHitSound: {fileID: 0}
+  animalHitSound: {fileID: 0}
   explosionParticle: {fileID: 0}
 --- !u!1 &992285705
 GameObject:
@@ -1323,7 +1437,7 @@ MonoBehaviour:
   speed: 20
   horizontalInput: 0
   projectilePrefab: {fileID: 3567985271595516736, guid: 8161eaee384d85e4ab0d75a8bb1fcc30, type: 3}
-  shootSound: {fileID: 8300000, guid: 778c6296c72b46b4c8700dd981538da7, type: 3}
+  shootSound: {fileID: 8300000, guid: 4a80ac4af73394b49a6e7309cb99845e, type: 3}
 --- !u!82 &1420504804
 AudioSource:
   m_ObjectHideFlags: 0

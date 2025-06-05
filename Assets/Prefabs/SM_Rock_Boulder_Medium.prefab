@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 3999177368883295131}
   m_Layer: 0
   m_Name: SM_Rock_Boulder_Medium
-  m_TagString: Obstacle
+  m_TagString: Medium Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,6 +129,7 @@ MonoBehaviour:
   liveManager: {fileID: 0}
   pointValue: 10
   rockHitSound: {fileID: 8300000, guid: 778c6296c72b46b4c8700dd981538da7, type: 3}
+  animalHitSound: {fileID: 0}
   explosionParticle: {fileID: 7535607469619513247, guid: ac10190cf200c4f7e881ca8e41d3d760, type: 3}
 --- !u!82 &-2671461781259657331
 AudioSource:

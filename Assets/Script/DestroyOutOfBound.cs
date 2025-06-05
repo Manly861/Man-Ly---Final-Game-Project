@@ -21,7 +21,7 @@ public class DestroyOutOfBound : MonoBehaviour
       }
       else if (transform.position.z < lowerBound)
       {
-         if (CompareTag("Obstacle"))
+         if (CompareTag("Obstacle") || CompareTag("Medium Obstacle") || CompareTag("Huge Obstacle"))
          {
             missingRockCounting.UpdateMissingText(1);
             if (missingRockCounting.amount == 10)
