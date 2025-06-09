@@ -8,8 +8,8 @@ public class DetectCollision : MonoBehaviour
     private AudioSource objectAudio;
     public AudioClip rockHitSound;
     public AudioClip animalHitSound;
-
     public ParticleSystem explosionParticle;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

@@ -19,6 +19,6 @@ public class MissingRockCounting : MonoBehaviour
     public void UpdateMissingText(int amounttoAdd)
     {
         amount += amounttoAdd;
-        missingText.text = "Missing: " + amount + " /10";
+        missingText.text = "Missing: " + amount + " / 3";
     }
 }

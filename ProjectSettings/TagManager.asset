@@ -8,6 +8,8 @@ TagManager:
   - SmallRock
   - Animal
   - Ground
+  - Medium Obstacle
+  - Huge Obstacle
   layers:
   - Default
   - TransparentFX

@@ -3,12 +3,14 @@ using UnityEngine;
 public class DestroyOutOfBound : MonoBehaviour
 {
    public MissingRockCounting missingRockCounting;
-     private float topBound = 30;
-     private float lowerBound = -10;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        missingRockCounting = FindObjectOfType<MissingRockCounting>();
+   private float topBound = 30;
+   private float lowerBound = -10;
+   public GameOver gameOver;
+   // Start is called once before the first execution of Update after the MonoBehaviour is created
+   void Start()
+   {
+      missingRockCounting = FindObjectOfType<MissingRockCounting>();
+      gameOver = FindObjectOfType<GameOver>();
     }
 
     // Update is called once per frame
@@ -24,9 +26,9 @@ public class DestroyOutOfBound : MonoBehaviour
          if (CompareTag("Obstacle") || CompareTag("Medium Obstacle") || CompareTag("Huge Obstacle"))
          {
             missingRockCounting.UpdateMissingText(1);
-            if (missingRockCounting.amount == 10)
+            if (missingRockCounting.amount == 3)
             {
-               Time.timeScale = 0.0f;
+               gameOver.GameOverActive();
             }
          }
          Destroy(gameObject);
