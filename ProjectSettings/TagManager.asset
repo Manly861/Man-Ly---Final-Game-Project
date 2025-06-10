@@ -10,6 +10,7 @@ TagManager:
   - Ground
   - Medium Obstacle
   - Huge Obstacle
+  - Power
   layers:
   - Default
   - TransparentFX

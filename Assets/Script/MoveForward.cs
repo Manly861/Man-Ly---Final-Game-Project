@@ -12,15 +12,6 @@ public class MoveForward : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (CompareTag("Ground"))
-        {
-            transform.Translate(Vector3.back * Time.deltaTime * speed);
-        }
-        else
-        {
-            transform.Translate(Vector3.forward * Time.deltaTime * speed);
-        }
-        
-        
+        transform.Translate(Vector3.forward * Time.deltaTime * speed); 
     }
 }

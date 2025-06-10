@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,6 +11,10 @@ public class PlayerController : MonoBehaviour
     public GameObject projectilePrefab;
     private AudioSource playerAudio;
     public AudioClip shootSound;
+    public GameObject powerupIndicator;
+    public bool isPowerup = false;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -36,5 +42,22 @@ public class PlayerController : MonoBehaviour
             playerAudio.PlayOneShot(shootSound, 1.0f);
         }
     }
-
+    public void IntricatorActive(bool getPowerUp)
+    {
+        powerupIndicator.gameObject.SetActive(getPowerUp);
+    }
+    public void SetPowerUp(bool state)
+    {
+        isPowerup = state;
+        IntricatorActive(isPowerup);
+        StartCoroutine(PowerupCountdownRoutine());
+    }
+    IEnumerator PowerupCountdownRoutine()
+    {
+        Debug.Log("⚡ Power-up started");
+        yield return new WaitForSeconds(7);
+        Debug.Log("⚡ Power-up end");
+        isPowerup = false;
+        IntricatorActive(false);
+    }
 }

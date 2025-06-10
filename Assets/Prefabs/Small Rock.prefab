@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -1032324240367295343}
   - component: {fileID: -2973918267408532850}
   - component: {fileID: 1614069678962935235}
-  - component: {fileID: 2052854270147927444}
+  - component: {fileID: 4042749346980827480}
   m_Layer: 0
   m_Name: Small Rock
   m_TagString: SmallRock
@@ -164,6 +164,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93f06080d50a41243b871452ec6bd9a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  missingRockCounting: {fileID: 0}
+  gameOver: {fileID: 0}
 --- !u!65 &1614069678962935235
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -185,7 +187,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.6651046, y: 0, z: 2.6651046}
   m_Center: {x: 0, y: 1.3325523, z: 0}
---- !u!114 &2052854270147927444
+--- !u!114 &4042749346980827480
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -197,3 +199,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ef5c5b7c150c14459ccaa32de4cb2c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasPowerup: 0
+  playerController: {fileID: 0}
