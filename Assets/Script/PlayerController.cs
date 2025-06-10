@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
     IEnumerator PowerupCountdownRoutine()
     {
         Debug.Log("⚡ Power-up started");
-        yield return new WaitForSeconds(7);
+        yield return new WaitForSeconds(5);
         Debug.Log("⚡ Power-up end");
         isPowerup = false;
         IntricatorActive(false);

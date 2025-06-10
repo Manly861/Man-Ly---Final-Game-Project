@@ -6,6 +6,7 @@ public class LiveManager : MonoBehaviour
     public TextMeshProUGUI liveText;
     private int live;
     public GameOver gameOver;
+    public GameObject restartButton;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
