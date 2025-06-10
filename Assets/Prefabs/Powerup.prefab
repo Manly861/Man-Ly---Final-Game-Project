@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3840256079524542053}
   - component: {fileID: 3785028878266951538}
   - component: {fileID: 1599538655088776275}
+  - component: {fileID: 8552153620766865764}
   m_Layer: 0
   m_Name: Powerup
   m_TagString: Power
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 31456830597766721}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.059719145, y: 0.6691277, z: 11.635839}
+  m_LocalPosition: {x: -0.059719145, y: 0, z: 11.635839}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -86,3 +87,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8552153620766865764
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31456830597766721}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.891613, y: 1.3382558, z: 0.200076}
+  m_Center: {x: -0.0000018924475, y: 1.5881868e-22, z: 0.000000011175874}
